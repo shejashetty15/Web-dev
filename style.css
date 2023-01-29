@@ -5,6 +5,14 @@
 }
 .container{
     display: flex;
+    position: fixed;
+    width: 100%;
+    /* background-color: gray; */
+    padding-bottom: 3px;
+    z-index:5 ;
+    box-shadow: 10px 10px 10px gray;
+    background-color: white;
+
 
 }
 /* /* .section::before{
@@ -42,8 +50,9 @@ li a{
 
 }
 li:hover{
+    /* border: 2px solid rgb(21, 24, 236); */
     cursor: pointer;
-    background-color: rgb(212, 209, 209);
+    background-color: aliceblue;
 }
 li a{
     text-decoration: none;
@@ -74,12 +83,24 @@ a{
 .descbox{
     padding: 30px;
     width: 50%;
-    margin: 50px auto;
+    margin: 80px auto;
     
+    
+}
+.descbox::after{
+
+}
+.desc p{
+    display: inline;
 }
 .descbox:hover{
     border-radius: 10px;
-    box-shadow: 10px 10px 20px grey;
+    transition: 1s;
+    /* box-shadow: 10px 10px 20px grey; */
+    box-shadow:  inset 0 0 0 4px #ef476f, 
+    inset 0 0 0 8px #ffd166, 
+    inset 0 0 0 12px #06d6a0,
+    inset 0 0 0 16px #118ab2;;
     cursor: grab;
 }
 .imgindesc{
@@ -106,11 +127,38 @@ a{
     border-radius: 20px;
     overflow: auto;
     background-color: aliceblue;
+    /* position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;*/
+  transition: transform 1s;
+  transform-style: preserve-3d; 
+  box-shadow: 10px 10px 10px #c10528;
 
 }
 .pro-1:hover{
     box-shadow: -10px -10px 40px #395994;
+    transform: rotateY(180deg);
+     /* position: relative; */
+  /* width: 100%;
+  height: 100%; */
+  /* text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;  */
 }
+/* .pro-1-back{
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);;
+    position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* border: 1px solid coral; */
+  /* border-radius: 1rem; */
+/* } */ 
 .proimg{
     width: 200px;
     /* border-radius: 20px; */
@@ -151,6 +199,13 @@ a{
     box-shadow: 10px 10px 20px grey;
 
 }
+.inter-1:hover{
+    cursor: pointer;
+    transition: 0.5s ease-out;
+    
+    width: 90%; 
+
+}
 
 .inter-1 h3{
     padding: 10px;
@@ -163,19 +218,34 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+.mser:hover{
+    transition: 0.4;
+    transform:skewY(-20deg);
 }
 .ser-1{
     margin: 20px;
     border-radius: 10px;
     overflow: auto;
-    height: 250px;
+    height: 200px;
     /* border: 2px solid red; */
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items:center;
     box-shadow: -10px -10px 20px #395994;
+    /* transition: 1s ;
+    transform: rotateY('30deg');  */
+    /* transition-duration: 5s; 
+    transition-timing-function: linear; */
 }
+.ser-1:hover{
+    cursor: pointer;
+    
+}
+     
+  
 
 .web{
     padding: 10px;
@@ -186,3 +256,69 @@ a{
 /* .content{
     padding-bottom: 30px;
 } */
+.animation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    padding: 0.45rem 0.25rem;
+    height: 1.21rem;
+    margin-bottom: 0rem;
+    display: inline-block;
+}
+.animation div:first-child{
+    animation: text-animation 5s infinite 0s;
+
+}
+.first {
+    background-color: #20a7d8;
+    padding: 3px;
+    margin-bottom: 2rem;
+}
+.second {
+    background-color: #CD921E;
+    padding: 3px;
+    margin-top: 3.6rem;
+}
+.third {
+    background-color: #c10528;
+    padding: 3px;
+    margin-top: 3.9rem;
+    margin-bottom: 0;
+}
+@keyframes text-animation {
+    0%{margin-top: 0;}
+    10%{margin-top: 0;}
+    20%{margin-top: -5.62rem;}
+    30%{
+        margin-top: -5.62rem;
+    }
+    40%{margin-top: -11.24rem;}
+    60%{margin-top: -11.24rem;}
+    70%{
+        margin-top: -5.62rem;
+    }
+    80%{margin-top: -5.62rem;}
+    90%{
+        margin-top: 0;
+    }
+    100%{margin-top: 0;}
+    
+}
+.updown{
+    display: inline-block;
+    width: 60px;
+    height:60px;
+    border-radius: 40px;
+    /* border: 2px solid red; */
+    float: right;
+    position: fixed;
+    background-color: #797bcc;
+    right:20px;
+    bottom: 40px;
+}
+.updown a{
+    display: block;
+    padding: 25px;
+}
